@@ -12,3 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "something after the build phase"
+      - run: echo "something that only exists on this branch"
