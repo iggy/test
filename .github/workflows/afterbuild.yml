@@ -1,0 +1,14 @@
+---
+name: after-build
+'on':
+  workflow_run:
+    workflows:
+      - build-wf
+    types:
+      - completed
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "something after the build phase"
